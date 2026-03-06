@@ -124,7 +124,13 @@ export default function DanielMateoPortfolio() {
               <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Projects</p>
 
               {/* Layer 2: Substack article preview */}
-              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4">
+              <div className="w-full rounded-xl overflow-hidden mb-4" style={{ border: '2px solid #f97316' }}>
+                <img
+                  src="https://substack-post-media.s3.amazonaws.com/public/images/6bb57440-5915-4dcc-a09d-511ebc96200c_1536x1024.png"
+                  alt="Magic Eden article"
+                  className="w-full object-cover"
+                  style={{ maxHeight: 220 }}
+                />
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-7 h-7 bg-orange-500 rounded-md flex items-center justify-center flex-shrink-0">
@@ -161,7 +167,7 @@ export default function DanielMateoPortfolio() {
               </div>
 
               {/* Layer 3: X/Twitter embed */}
-              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4">
+              <div className="w-full rounded-xl overflow-hidden mb-4" style={{ border: '2px solid #1d9bf0' }}>
                 <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
                   <Twitter className="w-4 h-4 text-gray-900" />
                   <span className="text-sm font-bold text-gray-900">@valueandtime</span>
@@ -187,7 +193,7 @@ export default function DanielMateoPortfolio() {
               </div>
 
               {/* Layer 4: YouTube video embed */}
-              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-10">
+              <div className="w-full rounded-xl overflow-hidden mb-10" style={{ border: '2px solid #ff0000' }}>
                 <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
                   <img src="/yt-icon.jpg" alt="Value & Time" className="w-8 h-8 rounded-full object-cover" />
                   <div>
