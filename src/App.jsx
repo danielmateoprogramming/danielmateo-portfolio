@@ -123,39 +123,35 @@ export default function DanielMateoPortfolio() {
                 Trading insights, market analysis, and educational content for traders and investors.
               </p>
 
-              {/* Layer 1: LinkedIn native profile card */}
-              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4">
-                <div className="h-24 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 relative" />
-                <div className="px-6 pb-5">
-                  <div className="flex items-end justify-between -mt-10 mb-4">
-                    <img
-                      src="/profile.jpg"
-                      alt="Daniel Mateo-Galvis"
-                      className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
-                    />
-                    <a
-                      href="https://www.linkedin.com/in/danielmateogalvis"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mb-1 px-5 py-1.5 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-full text-sm font-semibold transition-all duration-200"
-                    >
-                      Connect
-                    </a>
-                  </div>
-                  <h3 className="font-bold text-gray-900 text-lg leading-tight">Daniel Mateo-Galvis</h3>
-                  <p className="text-sm text-gray-600 mt-0.5">Finance & Crypto Content Creator · Value & Time</p>
-                  <p className="text-xs text-gray-400 mt-1">Miami, Florida</p>
-                  <div className="flex items-center gap-4 mt-4 pt-4 border-t border-gray-100 text-xs text-gray-500">
-                    <span className="font-semibold text-blue-600">500+ connections</span>
-                    <span>·</span>
-                    <a
-                      href="https://www.linkedin.com/in/danielmateogalvis"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      View full profile →
-                    </a>
+              {/* Layer 1: LinkedIn widget */}
+              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4" style={{ borderTop: '3px solid #0A66C2' }}>
+                <div className="px-6 py-5 flex items-center gap-5">
+                  <img
+                    src="/profile.jpg"
+                    alt="Daniel Mateo-Galvis"
+                    className="w-14 h-14 rounded-full object-cover flex-shrink-0 shadow-sm"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <h3 className="font-bold text-gray-900 leading-tight">Daniel Mateo-Galvis</h3>
+                        <p className="text-sm text-gray-500 mt-0.5">Finance & Crypto Content Creator · Value & Time</p>
+                        <p className="text-xs text-gray-400 mt-0.5">Miami, Florida · <span className="text-blue-600 font-medium">500+ connections</span></p>
+                      </div>
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <a
+                          href="https://www.linkedin.com/in/danielmateogalvis"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-semibold text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-3 py-1 rounded-full transition-all duration-200"
+                        >
+                          Connect
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
