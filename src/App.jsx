@@ -331,7 +331,7 @@ export default function DanielMateoPortfolio() {
                 ],
                 [
                   { name: 'StockTwits', url: 'https://stocktwits.com', logo: '/stocktwits-logo.png' },
-                  { name: 'Yuga Labs', url: 'https://yugalabs.io', logo: 'https://icon.horse/icon/yugalabs.io' },
+                  { name: 'Yuga Labs', url: 'https://yuga.com', logo: 'https://icon.horse/icon/yuga.com' },
                   { name: 'Apechain', url: 'https://apechain.com', logo: 'https://icon.horse/icon/apechain.com' },
                 ],
                 [
