@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { XEmbed } from 'react-social-media-embed';
+import { XEmbed, YouTubeEmbed } from 'react-social-media-embed';
 import { ExternalLink, Youtube, Twitter, Linkedin, Music2, Instagram } from 'lucide-react';
 
 export default function DanielMateoPortfolio() {
@@ -192,28 +192,11 @@ export default function DanielMateoPortfolio() {
               </div>
 
               {/* Layer 4: YouTube video embed */}
-              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-10">
-                <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
-                  <img src="/yt-icon.jpg" alt="Value & Time" className="w-8 h-8 rounded-full object-cover" />
-                  <div>
-                    <p className="text-sm font-bold text-gray-900 leading-none">Value & Time</p>
-                    <p className="text-xs text-gray-400 mt-0.5">@valueandtime</p>
-                  </div>
-                  <a
-                    href="https://youtube.com/@valueandtime"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-auto text-xs font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-full transition-colors"
-                  >
-                    Subscribe
-                  </a>
-                </div>
-                <div className="bg-black flex items-center justify-center" style={{ height: 320 }}>
-                  <div className="text-center text-gray-500">
-                    <Youtube className="w-10 h-10 mx-auto mb-2 text-red-500" />
-                    <p className="text-sm">Paste a YouTube video URL to embed a video here</p>
-                  </div>
-                </div>
+              <div className="w-full mb-10">
+                <YouTubeEmbed
+                  url="https://www.youtube.com/watch?v=kTrdpRFm45U&t=202s"
+                  width="100%"
+                />
               </div>
 
               {/* Tools */}
