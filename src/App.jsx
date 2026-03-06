@@ -158,6 +158,7 @@ export default function DanielMateoPortfolio() {
               ],
               [
                 { name: 'Crossmint', url: 'https://crossmint.com', logo: 'https://icon.horse/icon/crossmint.com' },
+                { name: 'Magic Eden', url: 'https://magiceden.io', logo: 'https://icon.horse/icon/magiceden.io' },
               ],
             ].map((row, rowIdx, rows) => (
               <div key={rowIdx} className="grid grid-cols-3"
