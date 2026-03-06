@@ -97,6 +97,7 @@ export default function DanielMateoPortfolio() {
 
         {/* ── ABOUT ─────────────────────────────────────────── */}
         <section id="about" ref={el => sectionRefs.current.about = el} className="py-12">
+          <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">About Me</p>
           {/* LinkedIn widget */}
           <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4" style={{ borderTop: '3px solid #0A66C2' }}>
             <div className="px-6 py-5 flex items-center gap-5">
