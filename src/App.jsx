@@ -1,12 +1,22 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { XEmbed, YouTubeEmbed } from 'react-social-media-embed';
 import { ExternalLink, Youtube, Twitter, Linkedin, Music2, Instagram } from 'lucide-react';
 
 export default function DanielMateoPortfolio() {
   const [activeTab, setActiveTab] = useState('home');
 
   useEffect(() => {
+    // Twitter embed
+    if (document.getElementById('twitter-widget-script')) {
+      if (window.twttr) window.twttr.widgets.load();
+    } else {
+      const script = document.createElement('script');
+      script.id = 'twitter-widget-script';
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      script.charset = 'utf-8';
+      document.body.appendChild(script);
+    }
     // LinkedIn badge
     if (!document.getElementById('linkedin-badge-script')) {
       const script = document.createElement('script');
@@ -184,18 +194,34 @@ export default function DanielMateoPortfolio() {
               </div>
 
               {/* Layer 3: X/Twitter embed */}
-              <div className="w-full mb-4">
-                <XEmbed
-                  url="https://x.com/valueandtime/status/2029582553674297621?s=20"
-                  width="100%"
-                />
+              <div className="w-full mb-4 flex justify-center">
+                <blockquote className="twitter-tweet" data-theme="light">
+                  <a href="https://x.com/valueandtime/status/2029582553674297621?s=20">Tweet by valueandtime</a>
+                </blockquote>
               </div>
 
               {/* Layer 4: YouTube video embed */}
-              <div className="w-full mb-10">
-                <YouTubeEmbed
-                  url="https://www.youtube.com/watch?v=kTrdpRFm45U&t=202s"
+              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-10">
+                <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
+                  <img src="/yt-icon.jpg" alt="Value & Time" className="w-8 h-8 rounded-full object-cover" />
+                  <div>
+                    <p className="text-sm font-bold text-gray-900 leading-none">Value & Time</p>
+                    <p className="text-xs text-gray-400 mt-0.5">@valueandtime</p>
+                  </div>
+                  <a href="https://youtube.com/@valueandtime" target="_blank" rel="noopener noreferrer"
+                    className="ml-auto text-xs font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-full transition-colors">
+                    Subscribe
+                  </a>
+                </div>
+                <iframe
                   width="100%"
+                  height="420"
+                  src="https://www.youtube.com/embed/kTrdpRFm45U?start=202"
+                  title="Value & Time"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ display: 'block' }}
                 />
               </div>
 
