@@ -1,22 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { XEmbed } from 'react-social-media-embed';
 import { ExternalLink, Youtube, Twitter, Linkedin, Music2, Instagram } from 'lucide-react';
 
 export default function DanielMateoPortfolio() {
   const [activeTab, setActiveTab] = useState('home');
 
   useEffect(() => {
-    // Twitter widget
-    if (document.getElementById('twitter-widget-script')) {
-      if (window.twttr) window.twttr.widgets.load();
-    } else {
-      const script = document.createElement('script');
-      script.id = 'twitter-widget-script';
-      script.src = 'https://platform.twitter.com/widgets.js';
-      script.async = true;
-      script.charset = 'utf-8';
-      document.body.appendChild(script);
-    }
     // LinkedIn badge
     if (!document.getElementById('linkedin-badge-script')) {
       const script = document.createElement('script');
@@ -193,17 +183,12 @@ export default function DanielMateoPortfolio() {
                 </div>
               </div>
 
-              {/* Layer 3: Twitter — full width */}
-              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4" style={{ height: 300 }}>
-                <a
-                  className="twitter-timeline"
-                  data-height="300"
-                  data-theme="light"
-                  data-chrome="noheader nofooter noborders"
-                  href="https://twitter.com/valueandtime"
-                >
-                  Tweets by valueandtime
-                </a>
+              {/* Layer 3: X/Twitter embed */}
+              <div className="w-full mb-4">
+                <XEmbed
+                  url="https://x.com/valueandtime/status/2029582553674297621?s=20"
+                  width="100%"
+                />
               </div>
 
               {/* Layer 4: YouTube video embed */}
