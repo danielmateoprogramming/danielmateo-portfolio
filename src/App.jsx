@@ -183,6 +183,7 @@ export default function DanielMateoPortfolio() {
         <section id="projects" ref={el => sectionRefs.current.projects = el} className="py-12 border-t border-gray-200">
           <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Projects</p>
 
+          <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-4">Value & Time</p>
           {/* Substack */}
           <div className="w-full rounded-xl overflow-hidden mb-4" style={{ border: '2px solid #f97316' }}>
             <img src="https://substack-post-media.s3.amazonaws.com/public/images/6bb57440-5915-4dcc-a09d-511ebc96200c_1536x1024.png"
@@ -271,6 +272,30 @@ export default function DanielMateoPortfolio() {
                   <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase group-hover:text-gray-900 transition-colors">{tool.name}</span>
                 </a>
               ))}
+            </div>
+          </div>
+
+          {/* Reddit Trading */}
+          <div className="border-t border-gray-200 pt-12 mb-12">
+            <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Reddit Trading</p>
+            <div className="w-full rounded-xl overflow-hidden" style={{ border: '2px solid #ff4500' }}>
+              <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
+                <svg className="w-5 h-5" viewBox="0 0 20 20" fill="#ff4500">
+                  <path d="M10 0C4.478 0 0 4.478 0 10c0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm5.894 9.223a1.33 1.33 0 0 1 .563 1.073 1.334 1.334 0 0 1-1.334 1.334 1.329 1.329 0 0 1-.878-.332c-.878.596-2.07.986-3.394 1.03l.577 2.717 1.876-.4a1.0 1.0 0 1 1 .093.435l-2.094.446a.25.25 0 0 1-.298-.188l-.644-3.032c-1.354-.033-2.573-.428-3.463-1.034a1.329 1.329 0 0 1-.876.332 1.334 1.334 0 0 1-1.334-1.334c0-.435.21-.82.534-1.065a2.62 2.62 0 0 1-.027-.378c0-1.917 2.228-3.472 4.974-3.472 2.745 0 4.973 1.555 4.973 3.472 0 .128-.01.254-.028.376zm-8.56.777a.889.889 0 1 0 1.778 0 .889.889 0 0 0-1.778 0zm4.939 2.356c-.607.607-1.762.655-2.273.655-.511 0-1.667-.048-2.273-.655a.167.167 0 0 1 .235-.235c.383.383 1.196.52 2.038.52.842 0 1.654-.137 2.038-.52a.167.167 0 0 1 .235.235zm-.213-1.467a.889.889 0 1 0 1.778 0 .889.889 0 0 0-1.778 0z"/>
+                </svg>
+                <span className="text-sm font-bold text-gray-900">Reddit Trading Community</span>
+                <a href="https://reddit.com/r/valueandtime" target="_blank" rel="noopener noreferrer"
+                  className="ml-auto text-xs font-semibold text-orange-600 hover:text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1.5 rounded-full transition-colors">
+                  Join
+                </a>
+              </div>
+              <div className="px-6 py-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">Finance and crypto trading discussions, market analysis, and community insights.</p>
+                <a href="https://reddit.com/r/valueandtime" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-lg transition-colors">
+                  View Community →
+                </a>
+              </div>
             </div>
           </div>
 
