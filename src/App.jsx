@@ -161,15 +161,30 @@ export default function DanielMateoPortfolio() {
               </div>
 
               {/* Layer 3: X/Twitter embed */}
-              <div className="w-full mb-4 flex justify-center"
-                dangerouslySetInnerHTML={{ __html: `
-                  <blockquote class="twitter-tweet" data-theme="light">
-                    <p lang="en" dir="ltr">Donald Trump is the worst vice president in Israeli history</p>
-                    &mdash; Value &amp; Time (@valueandtime)
-                    <a href="https://twitter.com/valueandtime/status/2029582553674297621?ref_src=twsrc%5Etfw">March 5, 2026</a>
-                  </blockquote>
-                `}}
-              />
+              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4">
+                <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-100">
+                  <Twitter className="w-4 h-4 text-gray-900" />
+                  <span className="text-sm font-bold text-gray-900">@valueandtime</span>
+                  <a
+                    href="https://x.com/valueandtime"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-auto text-xs font-semibold text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition-colors"
+                  >
+                    Follow
+                  </a>
+                </div>
+                <div
+                  className="flex justify-center px-6 py-2"
+                  dangerouslySetInnerHTML={{ __html: `
+                    <blockquote class="twitter-tweet" data-width="500" data-theme="light" data-dnt="true">
+                      <p lang="en" dir="ltr">Donald Trump is the worst vice president in Israeli history</p>
+                      &mdash; Value &amp; Time (@valueandtime)
+                      <a href="https://twitter.com/valueandtime/status/2029582553674297621?ref_src=twsrc%5Etfw">March 5, 2026</a>
+                    </blockquote>
+                  `}}
+                />
+              </div>
 
               {/* Layer 4: YouTube video embed */}
               <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-10">
