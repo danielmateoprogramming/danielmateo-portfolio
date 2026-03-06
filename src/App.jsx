@@ -192,11 +192,15 @@ export default function DanielMateoPortfolio() {
               </div>
 
               {/* Layer 3: X/Twitter embed */}
-              <div className="w-full mb-4 flex justify-center">
-                <blockquote className="twitter-tweet" data-theme="light">
-                  <a href="https://x.com/valueandtime/status/2029582553674297621?s=20">Tweet by valueandtime</a>
-                </blockquote>
-              </div>
+              <div className="w-full mb-4 flex justify-center"
+                dangerouslySetInnerHTML={{ __html: `
+                  <blockquote class="twitter-tweet" data-theme="light">
+                    <p lang="en" dir="ltr">Donald Trump is the worst vice president in Israeli history</p>
+                    &mdash; Value &amp; Time (@valueandtime)
+                    <a href="https://twitter.com/valueandtime/status/2029582553674297621?ref_src=twsrc%5Etfw">March 5, 2026</a>
+                  </blockquote>
+                `}}
+              />
 
               {/* Layer 4: YouTube video embed */}
               <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-10">
