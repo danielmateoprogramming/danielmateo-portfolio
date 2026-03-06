@@ -38,24 +38,6 @@ export default function DanielMateoPortfolio() {
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between py-4">
           <div className="flex items-center gap-4">
             <h1 className="text-xl font-bold text-gray-900">Daniel Mateo-Galvis</h1>
-            <a
-              href="https://youtube.com/@valueandtime"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded-full text-xs font-medium text-gray-700 transition-colors"
-            >
-              <Youtube className="w-3.5 h-3.5 text-red-600" />
-              YouTube
-            </a>
-            <a
-              href="https://x.com/valueandtime"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded-full text-xs font-medium text-gray-700 transition-colors"
-            >
-              <Twitter className="w-3.5 h-3.5" />
-              Twitter
-            </a>
           </div>
           <nav className="flex items-center gap-1">
             {[
@@ -79,7 +61,7 @@ export default function DanielMateoPortfolio() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-16">
+      <main className="max-w-5xl mx-auto px-6 py-8">
         <AnimatePresence mode="wait">
 
         {/* HOME TAB */}
@@ -92,29 +74,16 @@ export default function DanielMateoPortfolio() {
             transition={{ duration: 0.2 }}
           >
             {/* Intro / About */}
-            <div className="mb-12">
-              <div className="space-y-4 mb-8">
-                <p className="text-xl text-gray-900 leading-relaxed">
-                  Finance and crypto content creator with a combined social media following of 600,000+ across platforms with over 100M impressions. Creator of one of the more recognized independent finance brands on X, covering crypto markets, Solana, AI, and macroeconomics.
-                </p>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  Background in traditional financial media production. Currently building Value & Time into a full media operation — newsletter, podcast, and YouTube — focused on honest market analysis for people who are still paying attention when things are down.
-                </p>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  Also part-time house DJ performing at nightclubs in South Florida, under the project name <span className="font-semibold">Mateo</span>.
-                </p>
-                <p className="text-base text-gray-600">
-                  Open to brand partnerships, speaking opportunities, and media collaborations.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="mailto:valueandtime@icloud.com"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-medium transition-colors text-sm"
-                >
-                  📩 valueandtime@icloud.com
-                </a>
-              </div>
+            <div className="mb-8">
+              <p className="text-sm text-gray-600 leading-relaxed mb-4 max-w-2xl">
+                Finance and crypto content creator · 600,000+ followers · 100M+ impressions · Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-medium text-gray-900">Mateo</span> in South Florida.
+              </p>
+              <a
+                href="mailto:valueandtime@icloud.com"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-medium transition-colors text-sm"
+              >
+                📩 valueandtime@icloud.com
+              </a>
             </div>
 
             {/* Projects */}
