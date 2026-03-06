@@ -10,5 +10,9 @@ export default {
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss-animate'),
+    require('daisyui'),
   ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "luxury", "corporate", "synthwave", "dracula", "night", "dim"],
+  },
 }
