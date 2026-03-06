@@ -327,10 +327,10 @@ export default function DanielMateoPortfolio() {
                 [
                   { name: 'Bitcoin Conf', url: 'https://b.tc/conference', logo: '/bitcoin-conf-logo.png' },
                   { name: 'City of Miami', url: 'https://miamigov.com', logo: 'https://icon.horse/icon/miamigov.com' },
-                  { name: 'Valuetainment', url: 'https://valuetainment.com', logo: 'https://icon.horse/icon/valuetainment.com' },
+                  { name: 'Valuetainment', url: 'https://valuetainment.com', logo: '/valuetainment-logo.webp' },
                 ],
                 [
-                  { name: 'StockTwits', url: 'https://stocktwits.com', logo: 'https://icon.horse/icon/stocktwits.com' },
+                  { name: 'StockTwits', url: 'https://stocktwits.com', logo: '/stocktwits-logo.png' },
                 ],
               ].map((row, rowIdx, rows) => (
                 <div
