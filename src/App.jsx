@@ -75,22 +75,7 @@ export default function DanielMateoPortfolio() {
           >
             {/* Intro / About */}
             <div className="mb-8">
-              <p className="text-sm text-gray-600 leading-relaxed mb-4 max-w-2xl">
-                Finance and crypto content creator · 600,000+ followers · 100M+ impressions · Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-medium text-gray-900">Mateo</span> in South Florida.
-              </p>
-              <a
-                href="mailto:valueandtime@icloud.com"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-medium transition-colors text-sm"
-              >
-                📩 valueandtime@icloud.com
-              </a>
-            </div>
-
-            {/* Projects */}
-            <div className="border-t border-gray-200 pt-12">
-              <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Projects</p>
-
-              {/* Layer 1: LinkedIn widget */}
+              {/* LinkedIn widget */}
               <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4" style={{ borderTop: '3px solid #0A66C2' }}>
                 <div className="px-6 py-5 flex items-center gap-5">
                   <img
@@ -122,6 +107,21 @@ export default function DanielMateoPortfolio() {
                   </div>
                 </div>
               </div>
+
+              <p className="text-sm text-gray-600 leading-relaxed mb-4 max-w-2xl">
+                Finance and crypto content creator · 600,000+ followers · 100M+ impressions · Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-medium text-gray-900">Mateo</span> in South Florida.
+              </p>
+              <a
+                href="mailto:valueandtime@icloud.com"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-medium transition-colors text-sm"
+              >
+                📩 valueandtime@icloud.com
+              </a>
+            </div>
+
+            {/* Projects */}
+            <div className="border-t border-gray-200 pt-12">
+              <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Projects</p>
 
               {/* Layer 2: Substack article preview */}
               <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4">
