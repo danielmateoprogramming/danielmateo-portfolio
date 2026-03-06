@@ -218,8 +218,8 @@ export default function DanielMateoPortfolio() {
                   {[
                     { name: 'TradingView', url: 'https://www.tradingview.com/pricing/?share_your_love=valueandtime', logo: 'https://icon.horse/icon/tradingview.com' },
                     { name: 'Coinbase', url: 'https://coinbase.com/join/52XEHSS?src=ios-link', logo: 'https://icon.horse/icon/coinbase.com' },
-                    { name: 'Padre', url: 'https://trade.padre.gg/rk/value', logo: 'https://icon.horse/icon/padre.gg' },
-                    { name: 'Trojan Bot', url: 'https://t.me/solana_trojanbot?start=r-valueandtime', logo: '/trojan-logo.png' },
+                    { name: 'Padre', url: 'https://trade.padre.gg/rk/value', logo: '/padre-logo.png' },
+                    { name: 'Trojan Bot', url: 'https://t.me/solana_trojanbot?start=r-valueandtime', logo: 'https://icon.horse/icon/telegram.org' },
                   ].map((tool, i, arr) => (
                     <a
                       key={tool.name}
