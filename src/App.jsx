@@ -2,15 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Youtube, Twitter, Linkedin, Music2, Instagram } from 'lucide-react';
 
-const THEMES = ['light', 'dark', 'cupcake', 'luxury', 'corporate', 'synthwave', 'dracula', 'night', 'dim'];
-
 export default function DanielMateoPortfolio() {
   const [activeTab, setActiveTab] = useState('home');
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
 
   useEffect(() => {
     // Twitter widget
@@ -62,17 +55,6 @@ export default function DanielMateoPortfolio() {
               <Twitter className="w-3.5 h-3.5" />
               Twitter
             </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <select
-              value={theme}
-              onChange={(e) => setTheme(e.target.value)}
-              className="text-xs border border-gray-200 rounded-lg px-2 py-1.5 bg-white text-gray-600 cursor-pointer"
-            >
-              {THEMES.map(t => (
-                <option key={t} value={t}>{t}</option>
-              ))}
-            </select>
           </div>
           <nav className="flex items-center gap-1">
             {[
