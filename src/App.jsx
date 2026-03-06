@@ -123,26 +123,49 @@ export default function DanielMateoPortfolio() {
                 Trading insights, market analysis, and educational content for traders and investors.
               </p>
 
-              {/* Layer 1: LinkedIn — full width */}
+              {/* Layer 1: LinkedIn — full width, matches Twitter height */}
               <a
                 href="https://www.linkedin.com/in/danielmateogalvis"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-5 w-full border border-gray-200 rounded-xl px-6 py-5 mb-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200"
+                className="group flex items-center gap-5 w-full border border-gray-200 rounded-xl px-8 mb-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200"
+                style={{ height: 300 }}
               >
-                <div className="w-11 h-11 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Linkedin className="w-5 h-5 text-white" />
-                </div>
+                <img
+                  src="/profile.jpg"
+                  alt="Daniel Mateo-Galvis"
+                  className="w-28 h-28 rounded-full object-cover flex-shrink-0 shadow-md border-2 border-white ring-2 ring-blue-100"
+                />
                 <div className="flex-1 min-w-0">
-                  <p className="font-bold text-gray-900 text-sm">Daniel Mateo-Galvis</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Finance & Crypto Content Creator · LinkedIn</p>
+                  <p className="font-bold text-gray-900 text-xl">Daniel Mateo-Galvis</p>
+                  <p className="text-sm text-gray-500 mt-1">Finance & Crypto Content Creator</p>
+                  <p className="text-xs text-gray-400 mt-3 leading-relaxed max-w-lg">
+                    Finance and crypto content creator with 600,000+ followers and over 100M impressions across platforms.
+                  </p>
                 </div>
-                <span className="text-xs font-semibold text-blue-600 bg-blue-100 group-hover:bg-blue-200 px-3 py-1.5 rounded-full transition-colors flex-shrink-0">
-                  View Profile →
-                </span>
+                <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <Linkedin className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs font-semibold text-blue-600 bg-blue-100 group-hover:bg-blue-200 px-3 py-1.5 rounded-full transition-colors whitespace-nowrap">
+                    View Profile →
+                  </span>
+                </div>
               </a>
 
-              {/* Layer 2: Twitter — full width horizontal strip */}
+              {/* Layer 2: Substack — full width */}
+              <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4">
+                <iframe
+                  src="https://valueandtime.substack.com/embed"
+                  width="100%"
+                  height="180"
+                  style={{ border: 'none', background: 'white', display: 'block' }}
+                  frameBorder="0"
+                  scrolling="no"
+                />
+              </div>
+
+              {/* Layer 3: Twitter — full width */}
               <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4" style={{ height: 300 }}>
                 <a
                   className="twitter-timeline"
@@ -155,44 +178,33 @@ export default function DanielMateoPortfolio() {
                 </a>
               </div>
 
-              {/* Layer 3: YouTube + Substack — side by side full width */}
-              <div className="grid grid-cols-2 gap-4 mb-10">
-                {/* Substack embed */}
-                <div className="border border-gray-200 rounded-xl overflow-hidden">
-                  <iframe
-                    src="https://valueandtime.substack.com/embed"
-                    width="100%"
-                    height="220"
-                    style={{ border: 'none', background: 'white' }}
-                    frameBorder="0"
-                    scrolling="no"
-                  />
+              {/* Layer 4: YouTube — full width */}
+              <a
+                href="https://youtube.com/@valueandtime"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-6 w-full border border-gray-200 rounded-xl px-8 mb-10 hover:border-red-200 hover:bg-red-50 transition-all duration-200"
+                style={{ height: 120 }}
+              >
+                <img
+                  src="/yt-icon.jpg"
+                  alt="Value & Time YouTube"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0 shadow-sm"
+                />
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-gray-900">Value & Time</p>
+                  <p className="text-sm text-gray-500 mt-0.5">@valueandtime</p>
+                  <p className="text-xs text-gray-400 mt-1">Finance & crypto market analysis, Solana, AI, and macroeconomics.</p>
                 </div>
-
-                {/* YouTube channel preview */}
-                <a
-                  href="https://youtube.com/@valueandtime"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block border border-gray-200 rounded-xl overflow-hidden hover:border-red-200 hover:shadow-md transition-all duration-200"
-                >
-                  <div className="bg-gradient-to-br from-red-600 to-red-700 px-6 py-6 flex items-center gap-4">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                      <Youtube className="w-6 h-6 text-red-600" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-white leading-tight">Value & Time</p>
-                      <p className="text-red-200 text-sm mt-0.5">@valueandtime</p>
-                    </div>
+                <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
+                    <Youtube className="w-5 h-5 text-white" />
                   </div>
-                  <div className="px-6 py-5">
-                    <p className="text-sm text-gray-500 mb-4 leading-relaxed">Finance & crypto market analysis, Solana, AI, and macroeconomics.</p>
-                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-red-600 group-hover:gap-2 transition-all duration-150">
-                      Visit Channel →
-                    </span>
-                  </div>
-                </a>
-              </div>
+                  <span className="text-xs font-semibold text-red-600 bg-red-100 group-hover:bg-red-200 px-3 py-1.5 rounded-full transition-colors whitespace-nowrap">
+                    Visit Channel →
+                  </span>
+                </div>
+              </a>
 
               {/* Tools */}
               <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-4">Tools & Affiliate Links</p>
