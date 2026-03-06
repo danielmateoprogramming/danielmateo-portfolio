@@ -325,7 +325,7 @@ export default function DanielMateoPortfolio() {
                   { name: 'Solana Mobile', url: 'https://solanamobile.com', logo: 'https://icon.horse/icon/solanamobile.com' },
                 ],
                 [
-                  { name: 'Bitcoin Conf', url: 'https://b.tc/conference', logo: 'https://icon.horse/icon/b.tc' },
+                  { name: 'Bitcoin Conf', url: 'https://b.tc/conference', logo: '/bitcoin-conf-logo.png' },
                   { name: 'City of Miami', url: 'https://miamigov.com', logo: 'https://icon.horse/icon/miamigov.com' },
                 ],
               ].map((row, rowIdx, rows) => (
