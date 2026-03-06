@@ -213,35 +213,32 @@ export default function DanielMateoPortfolio() {
 
               {/* Tools */}
               <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-4">Tools & Affiliate Links</p>
-              <div className="grid grid-cols-2 gap-4 mb-12">
-                {[
-                  { name: 'TradingView', desc: 'Professional charting and technical analysis', url: 'https://www.tradingview.com/pricing/?share_your_love=valueandtime', logo: 'https://icon.horse/icon/tradingview.com', accent: 'hover:border-blue-300 hover:bg-blue-50', iconBg: 'bg-blue-50' },
-                  { name: 'Coinbase', desc: 'Trusted crypto exchange', url: 'https://coinbase.com/join/52XEHSS?src=ios-link', logo: 'https://icon.horse/icon/coinbase.com', accent: 'hover:border-blue-400 hover:bg-blue-50', iconBg: 'bg-blue-50' },
-                  { name: 'Padre', desc: 'Advanced memecoin trading', url: 'https://trade.padre.gg/rk/value', logo: 'https://icon.horse/icon/padre.gg', accent: 'hover:border-purple-300 hover:bg-purple-50', iconBg: 'bg-purple-50' },
-                  { name: 'Trojan Bot', desc: 'Trade from Telegram', url: 'https://t.me/solana_trojanbot?start=r-valueandtime', logo: 'https://icon.horse/icon/telegram.org', accent: 'hover:border-sky-300 hover:bg-sky-50', iconBg: 'bg-sky-50' },
-                ].map((tool) => (
-                  <a
-                    key={tool.name}
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group border border-gray-200 rounded-lg p-5 transition-all duration-200 ${tool.accent}`}
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${tool.iconBg}`}>
-                        <img
-                          src={tool.logo}
-                          alt={tool.name}
-                          className="w-5 h-5 object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-200"
-                          onError={(e) => { e.target.style.display = 'none'; }}
-                        />
-                      </div>
-                      <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-gray-600 transition-colors flex-shrink-0" />
-                    </div>
-                    <h3 className="text-base font-bold text-gray-900 mb-1">{tool.name}</h3>
-                    <p className="text-sm text-gray-500">{tool.desc}</p>
-                  </a>
-                ))}
+              <div className="rounded-xl overflow-hidden mb-12" style={{ border: '1px solid #e5e7eb' }}>
+                <div className="grid grid-cols-4" style={{ borderBottom: '1px solid #e5e7eb' }}>
+                  {[
+                    { name: 'TradingView', url: 'https://www.tradingview.com/pricing/?share_your_love=valueandtime', logo: 'https://icon.horse/icon/tradingview.com' },
+                    { name: 'Coinbase', url: 'https://coinbase.com/join/52XEHSS?src=ios-link', logo: 'https://icon.horse/icon/coinbase.com' },
+                    { name: 'Padre', url: 'https://trade.padre.gg/rk/value', logo: 'https://icon.horse/icon/padre.gg' },
+                    { name: 'Trojan Bot', url: 'https://t.me/solana_trojanbot?start=r-valueandtime', logo: 'https://icon.horse/icon/telegram.org' },
+                  ].map((tool, i, arr) => (
+                    <a
+                      key={tool.name}
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center justify-center gap-4 py-12 px-8 group transition-all hover:bg-gray-50"
+                      style={i < arr.length - 1 ? { borderRight: '1px solid #e5e7eb' } : {}}
+                    >
+                      <img
+                        src={tool.logo}
+                        alt={tool.name}
+                        className="h-12 w-12 object-contain grayscale group-hover:grayscale-0 transition-all"
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                      <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase group-hover:text-gray-900 transition-colors">{tool.name}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
