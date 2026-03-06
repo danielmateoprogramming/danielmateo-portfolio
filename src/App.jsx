@@ -15,6 +15,7 @@ export default function DanielMateoPortfolio() {
       script.src = 'https://platform.twitter.com/widgets.js';
       script.async = true;
       script.charset = 'utf-8';
+      script.onload = () => { if (window.twttr) window.twttr.widgets.load(); };
       document.body.appendChild(script);
     }
     // LinkedIn badge
@@ -119,9 +120,6 @@ export default function DanielMateoPortfolio() {
             {/* Projects */}
             <div className="border-t border-gray-200 pt-12">
               <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Projects</p>
-              <p className="text-lg text-gray-600 mb-8">
-                Trading insights, market analysis, and educational content for traders and investors.
-              </p>
 
               {/* Layer 1: LinkedIn widget */}
               <div className="w-full border border-gray-200 rounded-xl overflow-hidden mb-4" style={{ borderTop: '3px solid #0A66C2' }}>
