@@ -331,6 +331,11 @@ export default function DanielMateoPortfolio() {
                 ],
                 [
                   { name: 'StockTwits', url: 'https://stocktwits.com', logo: '/stocktwits-logo.png' },
+                  { name: 'Yuga Labs', url: 'https://yugalabs.io', logo: 'https://icon.horse/icon/yugalabs.io' },
+                  { name: 'Apechain', url: 'https://apechain.com', logo: 'https://icon.horse/icon/apechain.com' },
+                ],
+                [
+                  { name: 'Crossmint', url: 'https://crossmint.com', logo: 'https://icon.horse/icon/crossmint.com' },
                 ],
               ].map((row, rowIdx, rows) => (
                 <div
