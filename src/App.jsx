@@ -321,7 +321,7 @@ export default function DanielMateoPortfolio() {
                 ],
                 [
                   { name: 'Kick', url: 'https://kick.com', logo: 'https://icon.horse/icon/kick.com' },
-                  { name: 'Kraken', url: 'https://kraken.com', logo: 'https://icon.horse/icon/kraken.com' },
+                  { name: 'Kraken', url: 'https://kraken.com', logo: '/kraken-logo.webp' },
                   { name: 'Solana Mobile', url: 'https://solanamobile.com', logo: 'https://icon.horse/icon/solanamobile.com' },
                 ],
                 [
