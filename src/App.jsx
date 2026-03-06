@@ -1,21 +1,33 @@
 import { useState, useEffect } from 'react';
-import { ExternalLink, Youtube, Twitter, Linkedin, Music2, Instagram } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink, Youtube, Twitter, Music2, Instagram } from 'lucide-react';
 
 export default function DanielMateoPortfolio() {
   const [activeTab, setActiveTab] = useState('home');
 
-  // Load Twitter widget script
   useEffect(() => {
+    // Twitter widget
     if (document.getElementById('twitter-widget-script')) {
       if (window.twttr) window.twttr.widgets.load();
-      return;
+    } else {
+      const script = document.createElement('script');
+      script.id = 'twitter-widget-script';
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      script.charset = 'utf-8';
+      document.body.appendChild(script);
     }
-    const script = document.createElement('script');
-    script.id = 'twitter-widget-script';
-    script.src = 'https://platform.twitter.com/widgets.js';
-    script.async = true;
-    script.charset = 'utf-8';
-    document.body.appendChild(script);
+    // LinkedIn badge
+    if (!document.getElementById('linkedin-badge-script')) {
+      const script = document.createElement('script');
+      script.id = 'linkedin-badge-script';
+      script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    } else if (window.LIRenderAll) {
+      window.LIRenderAll();
+    }
   }, [activeTab]);
 
   return (
@@ -67,15 +79,44 @@ export default function DanielMateoPortfolio() {
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-16">
+        <AnimatePresence mode="wait">
 
         {/* HOME TAB */}
         {activeTab === 'home' && (
-          <div>
+          <motion.div
+            key="home"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.2 }}
+          >
             {/* Intro / About */}
             <div className="mb-12">
+              {/* LinkedIn profile badge */}
+              <div className="mb-6">
+                <div
+                  className="badge-base LI-profile-badge"
+                  data-locale="en_US"
+                  data-size="medium"
+                  data-theme="light"
+                  data-type="HORIZONTAL"
+                  data-vanity="danielmateogalvis"
+                  data-version="v1"
+                >
+                  <a
+                    className="badge-base__link LI-simple-link"
+                    href="https://www.linkedin.com/in/danielmateogalvis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Daniel Mateo-Galvis
+                  </a>
+                </div>
+              </div>
+
               <div className="space-y-4 mb-8">
                 <p className="text-xl text-gray-900 leading-relaxed">
-                  Finance and crypto content creator with a combined social media following of 600,000+ across platforms. Creator of <span className="font-semibold">Value & Time</span>, one of the more recognized independent finance brands on X, covering crypto markets, Solana, AI, and macroeconomics.
+                  Finance and crypto content creator with a combined social media following of 600,000+ across platforms with over 100M impressions. Creator of one of the more recognized independent finance brands on X, covering crypto markets, Solana, AI, and macroeconomics.
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
                   Background in traditional financial media production. Currently building Value & Time into a full media operation — newsletter, podcast, and YouTube — focused on honest market analysis for people who are still paying attention when things are down.
@@ -94,36 +135,15 @@ export default function DanielMateoPortfolio() {
                 >
                   📩 valueandtime@icloud.com
                 </a>
-                <a
-                  href="https://linkedin.com/in/danielmateogalvis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 hover:border-gray-500 text-gray-700 rounded-lg font-medium transition-colors text-sm"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn
-                </a>
               </div>
             </div>
 
-            {/* valueandtime */}
+            {/* Projects */}
             <div className="border-t border-gray-200 pt-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">valueandtime</h2>
+              <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Projects</p>
               <p className="text-lg text-gray-600 mb-8">
                 Trading insights, market analysis, and educational content for traders and investors.
               </p>
-
-              {/* Stats */}
-              <div className="flex gap-10 mb-10">
-                <div>
-                  <p className="text-3xl font-bold text-gray-900">90K+</p>
-                  <p className="text-sm text-gray-500 mt-1">Followers</p>
-                </div>
-                <div className="border-l border-gray-200 pl-10">
-                  <p className="text-3xl font-bold text-gray-900">30M+</p>
-                  <p className="text-sm text-gray-500 mt-1">Monthly Impressions</p>
-                </div>
-              </div>
 
               {/* Two-column: Twitter feed + right col */}
               <div className="grid grid-cols-5 gap-8 mb-10">
@@ -142,40 +162,40 @@ export default function DanielMateoPortfolio() {
 
                 {/* Right col: YouTube card + Newsletter - takes 2/5 */}
                 <div className="col-span-2 flex flex-col gap-6">
-                  {/* YouTube card */}
+                  {/* YouTube channel preview */}
                   <a
                     href="https://youtube.com/@valueandtime"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col items-center justify-center gap-3 border border-gray-200 rounded-xl p-6 hover:border-red-300 hover:bg-red-50 transition-all text-center"
+                    className="group block border border-gray-200 rounded-xl overflow-hidden hover:border-red-200 hover:shadow-md transition-all duration-200"
                   >
-                    <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Youtube className="w-7 h-7 text-white" />
+                    <div className="bg-gradient-to-br from-red-600 to-red-700 px-5 py-5 flex items-center gap-3">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <Youtube className="w-5 h-5 text-red-600" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-white text-sm leading-tight">Value & Time</p>
+                        <p className="text-red-200 text-xs mt-0.5">@valueandtime</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-bold text-gray-900 text-sm">Watch on YouTube</p>
-                      <p className="text-xs text-gray-500 mt-1">@valueandtime</p>
+                    <div className="px-5 py-4">
+                      <p className="text-xs text-gray-500 mb-3 leading-relaxed">Finance & crypto market analysis, Solana, AI, and macroeconomics.</p>
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-red-600 group-hover:gap-2 transition-all duration-150">
+                        Visit Channel →
+                      </span>
                     </div>
-                    <span className="text-xs font-medium text-red-600 group-hover:underline">Subscribe →</span>
                   </a>
 
-                  {/* Newsletter */}
-                  <div className="border border-gray-200 rounded-xl p-6">
-                    <h3 className="text-sm font-bold text-gray-900 mb-1">Newsletter</h3>
-                    <p className="text-xs text-gray-500 mb-4">Weekly trading insights delivered to your inbox.</p>
-                    <div className="flex flex-col gap-2">
-                      <input
-                        type="email"
-                        placeholder="your@email.com"
-                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-900 text-sm"
-                      />
-                      <button
-                        type="submit"
-                        className="w-full px-4 py-2.5 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg transition-colors text-sm"
-                      >
-                        Subscribe
-                      </button>
-                    </div>
+                  {/* Substack embed */}
+                  <div className="border border-gray-200 rounded-xl overflow-hidden">
+                    <iframe
+                      src="https://valueandtime.substack.com/embed"
+                      width="100%"
+                      height="220"
+                      style={{ border: 'none', background: 'white' }}
+                      frameBorder="0"
+                      scrolling="no"
+                    />
                   </div>
                 </div>
               </div>
@@ -184,10 +204,10 @@ export default function DanielMateoPortfolio() {
               <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-4">Tools & Affiliate Links</p>
               <div className="grid grid-cols-2 gap-4 mb-12">
                 {[
-                  { name: 'TradingView', desc: 'Professional charting and technical analysis', url: 'https://www.tradingview.com/pricing/?share_your_love=valueandtime' },
-                  { name: 'Coinbase', desc: 'Trusted crypto exchange', url: 'https://coinbase.com/join/52XEHSS?src=ios-link' },
-                  { name: 'Padre', desc: 'Advanced memecoin trading', url: 'https://trade.padre.gg/rk/value' },
-                  { name: 'Trojan Bot', desc: 'Trade from Telegram', url: 'https://t.me/solana_trojanbot?start=r-valueandtime' },
+                  { name: 'TradingView', desc: 'Professional charting and technical analysis', url: 'https://www.tradingview.com/pricing/?share_your_love=valueandtime', logo: 'https://icon.horse/icon/tradingview.com' },
+                  { name: 'Coinbase', desc: 'Trusted crypto exchange', url: 'https://coinbase.com/join/52XEHSS?src=ios-link', logo: 'https://icon.horse/icon/coinbase.com' },
+                  { name: 'Padre', desc: 'Advanced memecoin trading', url: 'https://trade.padre.gg/rk/value', logo: 'https://icon.horse/icon/padre.gg' },
+                  { name: 'Trojan Bot', desc: 'Trade from Telegram', url: 'https://t.me/solana_trojanbot?start=r-valueandtime', logo: 'https://icon.horse/icon/telegram.org' },
                 ].map((tool) => (
                   <a
                     key={tool.name}
@@ -196,10 +216,16 @@ export default function DanielMateoPortfolio() {
                     rel="noopener noreferrer"
                     className="group border border-gray-200 rounded-lg p-5 hover:border-gray-400 hover:shadow-sm transition-all"
                   >
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="text-base font-bold text-gray-900">{tool.name}</h3>
-                      <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-gray-900 transition-colors flex-shrink-0" />
+                    <div className="flex items-start justify-between mb-3">
+                      <img
+                        src={tool.logo}
+                        alt={tool.name}
+                        className="w-7 h-7 object-contain opacity-50 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-200"
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                      <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-gray-900 transition-colors flex-shrink-0" />
                     </div>
+                    <h3 className="text-base font-bold text-gray-900 mb-1">{tool.name}</h3>
                     <p className="text-sm text-gray-500">{tool.desc}</p>
                   </a>
                 ))}
@@ -268,12 +294,18 @@ export default function DanielMateoPortfolio() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
 
         {/* PARTNERSHIPS TAB */}
         {activeTab === 'partnerships' && (
-          <div>
+          <motion.div
+            key="partnerships"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #e5e7eb' }}>
               {[
                 [
@@ -317,12 +349,18 @@ export default function DanielMateoPortfolio() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
 
         {/* MUSIC TAB */}
         {activeTab === 'music' && (
-          <div>
+          <motion.div
+            key="music"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="flex items-center gap-4 mb-6">
               <h2 className="text-4xl font-bold text-gray-900">MATEO</h2>
             </div>
@@ -387,8 +425,9 @@ export default function DanielMateoPortfolio() {
             >
               Book Event
             </a>
-          </div>
+          </motion.div>
         )}
+        </AnimatePresence>
       </main>
 
       {/* Footer */}
