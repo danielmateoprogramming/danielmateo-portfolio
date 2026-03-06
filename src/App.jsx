@@ -232,7 +232,7 @@ export default function DanielMateoPortfolio() {
                       <img
                         src={tool.logo}
                         alt={tool.name}
-                        className="h-12 w-12 object-contain grayscale group-hover:grayscale-0 transition-all"
+                        className="h-12 w-12 object-contain transition-all"
                         onError={(e) => { e.target.style.display = 'none'; }}
                       />
                       <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase group-hover:text-gray-900 transition-colors">{tool.name}</span>
@@ -346,7 +346,7 @@ export default function DanielMateoPortfolio() {
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="h-12 w-12 object-contain grayscale group-hover:grayscale-0 transition-all"
+                        className="h-12 w-12 object-contain transition-all"
                         onError={(e) => { e.target.style.display = 'none'; }}
                       />
                       <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase group-hover:text-gray-900 transition-colors">{partner.name}</span>
