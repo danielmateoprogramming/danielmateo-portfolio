@@ -318,19 +318,13 @@ export default function DanielMateoPortfolio() {
               <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>House DJ performing at nightclubs in South Florida. DJ sets, live mixes, and event bookings.</p>
 
               <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.1)' }}>
-                <div className="flex items-center justify-between px-5 py-3.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                  <div>
-                    <p className="text-sm font-semibold text-white">Halloween Mix 2025</p>
-                    <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Live from Palm Beach</p>
-                  </div>
-                  <a href="https://x.com/itsmateomusic" target="_blank" rel="noopener noreferrer"
-                    className="text-xs font-semibold text-black bg-white hover:bg-gray-100 px-4 py-2 rounded-full transition-colors">
-                    Book Event
-                  </a>
-                </div>
-                <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1994831648&color=%23ffffff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" />
+                <iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/itsmateomusic&color=%23ffffff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true" />
               </div>
+              <a href="https://x.com/itsmateomusic" target="_blank" rel="noopener noreferrer"
+                className="inline-block text-xs font-semibold text-black bg-white hover:bg-gray-100 px-4 py-2 rounded-full transition-colors mb-4">
+                Book Event
+              </a>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {[
