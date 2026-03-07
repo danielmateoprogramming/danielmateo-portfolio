@@ -92,13 +92,13 @@ export default function DanielMateoPortfolio() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-10 space-y-6">
+      <main className="max-w-4xl mx-auto px-6 py-6 space-y-3">
 
         {/* ── ABOUT ─────────────────────────────────────────── */}
-        <section id="about" ref={el => sectionRefs.current.about = el} className="space-y-4">
+        <section id="about" ref={el => sectionRefs.current.about = el} className="space-y-2">
 
           {/* Hero card */}
-          <div className="bg-white rounded-3xl p-8 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+          <div className="bg-white rounded-2xl p-5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-4 flex-wrap">
@@ -112,7 +112,7 @@ export default function DanielMateoPortfolio() {
                     Get in touch
                   </a>
                 </div>
-                <div className="text-sm text-gray-600 leading-relaxed mt-4 space-y-3">
+                <div className="text-sm text-gray-600 leading-relaxed mt-3 space-y-2">
                   <p>Finance and crypto content creator with a combined social media following of 600,000+ across platforms. Creator of <span className="font-semibold text-gray-900">Value & Time</span>, one of the more recognized independent finance brands on X, covering crypto markets, Solana, AI, and macroeconomics.</p>
                   <p>Background in traditional financial media production. Currently building Value & Time into a full media operation — newsletter, podcast, and YouTube — focused on honest market analysis for people who are still paying attention when things are down.</p>
                   <p>Also Part Time House-DJ performing at nightclubs in South Florida, under the project name <span className="font-semibold text-gray-900">"Mateo"</span></p>
@@ -124,7 +124,7 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* LinkedIn card */}
-          <div className="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4" style={{ border: '1px solid rgba(0,0,0,0.06)', borderLeft: '3px solid #0A66C2' }}>
+          <div className="bg-white rounded-2xl p-4 shadow-sm flex items-center gap-3" style={{ border: '1px solid rgba(0,0,0,0.06)', borderLeft: '3px solid #0A66C2' }}>
             <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-11 h-11 rounded-full object-cover flex-shrink-0" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold text-gray-900 leading-tight">Daniel Mateo-Galvis</p>
@@ -140,7 +140,7 @@ export default function DanielMateoPortfolio() {
         {/* ── PARTNERSHIPS ──────────────────────────────────── */}
         <section id="partnerships" ref={el => sectionRefs.current.partnerships = el}>
           <div className="bg-white rounded-3xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <div className="px-6 pt-6 pb-4">
+            <div className="px-5 pt-4 pb-3">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Partnerships</p>
             </div>
             {[
@@ -173,7 +173,7 @@ export default function DanielMateoPortfolio() {
                 style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                 {row.map((partner, i) => (
                   <a key={partner.name} href={partner.url} target="_blank" rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-3 py-8 px-6 group hover:bg-gray-50 transition-colors"
+                    className="flex flex-col items-center justify-center gap-2 py-5 px-4 group hover:bg-gray-50 transition-colors"
                     style={i < row.length - 1 ? { borderRight: '1px solid rgba(0,0,0,0.06)' } : {}}>
                     <img src={partner.logo} alt={partner.name} className="h-10 w-10 object-contain"
                       onError={(e) => { e.target.style.display = 'none'; }} />
@@ -186,7 +186,7 @@ export default function DanielMateoPortfolio() {
         </section>
 
         {/* ── PROJECTS ──────────────────────────────────────── */}
-        <section id="projects" ref={el => sectionRefs.current.projects = el} className="space-y-4">
+        <section id="projects" ref={el => sectionRefs.current.projects = el} className="space-y-2">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest px-1">Projects</p>
 
           {/* Value & Time label */}
@@ -196,9 +196,9 @@ export default function DanielMateoPortfolio() {
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <img
               src="https://substack-post-media.s3.amazonaws.com/public/images/6bb57440-5915-4dcc-a09d-511ebc96200c_1536x1024.png"
-              alt="Article" className="w-full object-cover" style={{ maxHeight: 200 }}
+              alt="Article" className="w-full object-cover" style={{ maxHeight: 160 }}
             />
-            <div className="p-5">
+            <div className="p-4">
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-6 h-6 bg-orange-500 rounded-md flex items-center justify-center">
                   <span className="text-white text-xs font-bold">S</span>
@@ -257,7 +257,7 @@ export default function DanielMateoPortfolio() {
                 Subscribe
               </a>
             </div>
-            <iframe width="100%" height="380"
+            <iframe width="100%" height="300"
               src="https://www.youtube.com/embed/kTrdpRFm45U?start=202"
               title="Value & Time" frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -266,7 +266,7 @@ export default function DanielMateoPortfolio() {
 
           {/* Tools */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <div className="px-5 pt-5 pb-3">
+            <div className="px-5 pt-4 pb-2">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Tools & Affiliate Links</p>
             </div>
             <div className="grid grid-cols-4">
@@ -277,7 +277,7 @@ export default function DanielMateoPortfolio() {
                 { name: 'Trojan Bot', url: 'https://t.me/solana_trojanbot?start=r-valueandtime', logo: 'https://icon.horse/icon/telegram.org' },
               ].map((tool, i, arr) => (
                 <a key={tool.name} href={tool.url} target="_blank" rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center gap-3 py-7 px-4 group hover:bg-gray-50 transition-colors"
+                  className="flex flex-col items-center justify-center gap-2 py-5 px-4 group hover:bg-gray-50 transition-colors"
                   style={{ borderTop: '1px solid rgba(0,0,0,0.06)', ...(i < arr.length - 1 ? { borderRight: '1px solid rgba(0,0,0,0.06)' } : {}) }}>
                   <img src={tool.logo} alt={tool.name} className="h-10 w-10 object-contain"
                     onError={(e) => { e.target.style.display = 'none'; }} />
@@ -299,8 +299,8 @@ export default function DanielMateoPortfolio() {
                 Join
               </a>
             </div>
-            <div className="px-5 py-5">
-              <p className="text-sm text-gray-500 leading-relaxed mb-4">Finance and crypto trading discussions, market analysis, and community insights.</p>
+            <div className="px-5 py-4">
+              <p className="text-sm text-gray-500 leading-relaxed mb-3">Finance and crypto trading discussions, market analysis, and community insights.</p>
               <a href="https://reddit.com/r/valueandtime" target="_blank" rel="noopener noreferrer"
                 className="text-xs font-semibold text-white px-4 py-2 rounded-full transition-colors"
                 style={{ background: '#ff4500' }}>
@@ -311,10 +311,10 @@ export default function DanielMateoPortfolio() {
 
           {/* MATEO */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <div className="p-6">
+            <div className="p-5">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Also</p>
-              <h2 className="text-3xl font-bold text-gray-900 mb-1">MATEO</h2>
-              <p className="text-sm text-gray-500 mb-6">DJ sets, live mixes, and event bookings.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">MATEO</h2>
+              <p className="text-sm text-gray-500 mb-4">DJ sets, live mixes, and event bookings.</p>
 
               <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
                 <div className="flex items-center justify-between px-5 py-3.5" style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
@@ -355,14 +355,14 @@ export default function DanielMateoPortfolio() {
 
         {/* ── CONTACT ───────────────────────────────────────── */}
         <section id="contact" ref={el => sectionRefs.current.contact = el}>
-          <div className="bg-white rounded-3xl p-8 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Contact</p>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Get in touch</h2>
-            <p className="text-sm text-gray-500 mb-6 max-w-md leading-relaxed">
+          <div className="bg-white rounded-2xl p-5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Contact</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Get in touch</h2>
+            <p className="text-sm text-gray-500 mb-4 max-w-md leading-relaxed">
               Open to brand partnerships, speaking opportunities, podcast appearances, and media collaborations.
             </p>
             <a href="mailto:valueandtime@icloud.com"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2 rounded-full transition-colors mb-4"
               style={{ background: '#111' }}>
               valueandtime@icloud.com →
             </a>
@@ -384,7 +384,7 @@ export default function DanielMateoPortfolio() {
       </main>
 
       {/* Footer */}
-      <footer className="max-w-4xl mx-auto px-6 py-8 mt-4 flex justify-between items-center text-xs text-gray-400">
+      <footer className="max-w-4xl mx-auto px-6 py-6 mt-2 flex justify-between items-center text-xs text-gray-400">
         <span>© 2026 Daniel Mateo-Galvis</span>
         <div className="flex gap-5">
           <a href="https://x.com/valueandtime" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700 transition-colors">@valueandtime</a>
