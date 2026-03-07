@@ -113,7 +113,6 @@ export default function DanielMateoPortfolio() {
           {/* Bio card */}
           <div className="bg-white rounded-2xl p-5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex items-start justify-between gap-4 flex-wrap mb-3">
-              <p className="text-sm text-gray-500">Finance & Crypto Content Creator · Value & Time</p>
               <a href="mailto:valueandtime@icloud.com"
                 className="text-xs font-semibold text-white px-4 py-2 rounded-full transition-colors flex-shrink-0"
                 style={{ background: '#111' }}>
