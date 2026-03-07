@@ -122,7 +122,7 @@ export default function DanielMateoPortfolio() {
             <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
               <span className="text-xs text-gray-400">Location</span>
               <div>
-                <p className="text-lg font-bold text-gray-900 leading-none">Miami</p>
+                <p className="text-lg font-bold text-gray-900 leading-none">Palm Beach</p>
                 <p className="text-xs text-gray-400 mt-0.5">Florida</p>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function DanielMateoPortfolio() {
               <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-11 h-11 rounded-full object-cover flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</p>
-                <p className="text-xs text-gray-400 mt-0.5">Miami · <span className="text-blue-600 font-medium">500+ connections</span></p>
+                <p className="text-xs text-gray-400 mt-0.5">Palm Beach · <span className="text-blue-600 font-medium">500+ connections</span></p>
               </div>
               <a href="https://www.linkedin.com/in/danielmateogalvis" target="_blank" rel="noopener noreferrer"
                 className="text-xs font-semibold text-blue-600 border border-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 px-4 py-1.5 rounded-full transition-all flex-shrink-0">
@@ -178,7 +178,7 @@ export default function DanielMateoPortfolio() {
               </div>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-gray-900">Mateo</span> in South Florida.</p>
               <div className="flex gap-2 flex-wrap mb-4">
-                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">📍 Miami</span>
+                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">📍 Palm Beach</span>
                 <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">600K+ followers</span>
                 <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">100M+ impressions</span>
               </div>
