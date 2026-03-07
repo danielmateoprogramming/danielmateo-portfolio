@@ -312,7 +312,9 @@ export default function DanielMateoPortfolio() {
           {/* MATEO */}
           <div className="rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)', background: '#000' }}>
             <div className="p-5">
-              <img src="/mateo-logo.png" alt="MATEO" className="h-10 w-auto mb-4" />
+              <div className="flex items-center justify-center py-6 mb-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+                <img src="/mateo-logo.png" alt="MATEO" className="w-full max-w-xs object-contain" />
+              </div>
               <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>House DJ performing at nightclubs in South Florida. DJ sets, live mixes, and event bookings.</p>
 
               <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.1)' }}>
