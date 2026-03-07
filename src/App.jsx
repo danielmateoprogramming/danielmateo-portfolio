@@ -95,47 +95,52 @@ export default function DanielMateoPortfolio() {
       <main className="max-w-4xl mx-auto px-6 py-10 space-y-6">
 
         {/* ── ABOUT ─────────────────────────────────────────── */}
-        <section id="about" ref={el => sectionRefs.current.about = el} className="space-y-4">
+        <section id="about" ref={el => sectionRefs.current.about = el} className="space-y-3">
 
-          {/* Hero card */}
-          <div className="bg-white rounded-3xl p-8 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-              <img
-                src="/profile.jpg"
-                alt="Daniel Mateo-Galvis"
-                className="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
-                style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
-              />
-              <div className="flex-1">
-                <div className="flex items-start justify-between gap-4 flex-wrap">
-                  <div>
-                    <h1 className="text-2xl font-bold text-gray-900 leading-tight">Daniel Mateo-Galvis</h1>
-                    <p className="text-sm text-gray-500 mt-1">Finance & Crypto Content Creator · Value & Time</p>
+          {/* Gradient hero card */}
+          <div className="rounded-3xl overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 60%, #3a3a3a 100%)' }}>
+            <div className="p-8 sm:p-10">
+              <div className="flex flex-col sm:flex-row gap-7 items-start sm:items-center">
+                <img
+                  src="/profile.jpg"
+                  alt="Daniel Mateo-Galvis"
+                  className="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
+                  style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.4)' }}
+                />
+                <div className="flex-1">
+                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                    <div>
+                      <h1 className="text-2xl font-bold text-white leading-tight">Daniel Mateo-Galvis</h1>
+                      <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Finance & Crypto Content Creator · Value & Time</p>
+                    </div>
+                    <a href="mailto:valueandtime@icloud.com"
+                      className="text-xs font-semibold px-4 py-2 rounded-full transition-all flex-shrink-0 hover:opacity-90"
+                      style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)' }}>
+                      Get in touch
+                    </a>
                   </div>
-                  <a href="mailto:valueandtime@icloud.com"
-                    className="text-xs font-semibold text-white px-4 py-2 rounded-full transition-colors flex-shrink-0"
-                    style={{ background: '#111' }}>
-                    Get in touch
-                  </a>
+                  <p className="text-sm leading-relaxed mt-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                    Finance and crypto content creator · 600,000+ followers · 100M+ impressions · Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-white">Mateo</span> in South Florida.
+                  </p>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed mt-4">
-                  Finance and crypto content creator · 600,000+ followers · 100M+ impressions · Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-gray-900">Mateo</span> in South Florida.
-                </p>
               </div>
             </div>
-          </div>
 
-          {/* LinkedIn card */}
-          <div className="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4" style={{ border: '1px solid rgba(0,0,0,0.06)', borderLeft: '3px solid #0A66C2' }}>
-            <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-11 h-11 rounded-full object-cover flex-shrink-0" />
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-gray-900 leading-tight">Daniel Mateo-Galvis</p>
-              <p className="text-xs text-gray-400 mt-0.5">Palm Beach, Florida · <span className="text-blue-600 font-medium">500+ connections</span></p>
+            {/* LinkedIn strip inside hero */}
+            <div className="px-8 sm:px-10 py-4 flex items-center gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.2)' }}>
+              <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-9 h-9 rounded-full object-cover flex-shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-white leading-tight">Daniel Mateo-Galvis</p>
+                <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>Palm Beach, Florida · <span style={{ color: '#93c5fd' }}>500+ connections</span></p>
+              </div>
+              <a href="https://www.linkedin.com/in/danielmateogalvis" target="_blank" rel="noopener noreferrer"
+                className="text-xs font-semibold px-4 py-1.5 rounded-full transition-all flex-shrink-0"
+                style={{ color: '#93c5fd', border: '1px solid rgba(96,165,250,0.3)' }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#0A66C2'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#93c5fd'; }}>
+                Connect on LinkedIn
+              </a>
             </div>
-            <a href="https://www.linkedin.com/in/danielmateogalvis" target="_blank" rel="noopener noreferrer"
-              className="text-xs font-semibold text-blue-600 border border-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 px-4 py-1.5 rounded-full transition-all flex-shrink-0">
-              Connect
-            </a>
           </div>
         </section>
 
