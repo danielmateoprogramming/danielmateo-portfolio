@@ -105,12 +105,11 @@ export default function DanielMateoPortfolio() {
           {/* Bento grid — desktop */}
           <div className="hidden sm:grid grid-cols-3 gap-3">
 
-            {/* Photo tile — spans 2 rows */}
-            <div className={`${card} overflow-hidden row-span-2`} style={{ ...cardBorder, minHeight: 280 }}>
-              <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-full h-full object-cover" style={{ minHeight: 280 }} />
+            {/* Row 1: Photo + Name */}
+            <div className={`${card} overflow-hidden`} style={{ ...cardBorder, aspectRatio: '1/1' }}>
+              <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-full h-full object-cover object-top" />
             </div>
 
-            {/* Name + title tile */}
             <div className={`${card} col-span-2 px-7 py-6 flex flex-col justify-center`} style={cardBorder}>
               <p className="text-xs font-medium text-gray-400 mb-1">Finance · Crypto · Content</p>
               <h1 className="text-2xl font-bold text-gray-900 leading-tight tracking-tight">Daniel<br/>Mateo-Galvis</h1>
@@ -119,32 +118,30 @@ export default function DanielMateoPortfolio() {
               </p>
             </div>
 
-            {/* Stats row — fills col 2–3 of row 2 */}
-            <div className="col-span-2 grid grid-cols-3 gap-3">
-              <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
-                <span className="text-xs text-gray-400">Location</span>
-                <div>
-                  <p className="text-lg font-bold text-gray-900 leading-none">Miami</p>
-                  <p className="text-xs text-gray-400 mt-0.5">Florida</p>
-                </div>
+            {/* Row 2: 3 stat tiles */}
+            <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
+              <span className="text-xs text-gray-400">Location</span>
+              <div>
+                <p className="text-lg font-bold text-gray-900 leading-none">Miami</p>
+                <p className="text-xs text-gray-400 mt-0.5">Florida</p>
               </div>
-              <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
-                <span className="text-xs text-gray-400">Followers</span>
-                <div>
-                  <p className="text-lg font-bold text-gray-900 leading-none">600K+</p>
-                  <p className="text-xs text-gray-400 mt-0.5">across platforms</p>
-                </div>
+            </div>
+            <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
+              <span className="text-xs text-gray-400">Followers</span>
+              <div>
+                <p className="text-lg font-bold text-gray-900 leading-none">600K+</p>
+                <p className="text-xs text-gray-400 mt-0.5">across platforms</p>
               </div>
-              <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
-                <span className="text-xs text-gray-400">Impressions</span>
-                <div>
-                  <p className="text-lg font-bold text-gray-900 leading-none">100M+</p>
-                  <p className="text-xs text-gray-400 mt-0.5">lifetime</p>
-                </div>
+            </div>
+            <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
+              <span className="text-xs text-gray-400">Impressions</span>
+              <div>
+                <p className="text-lg font-bold text-gray-900 leading-none">100M+</p>
+                <p className="text-xs text-gray-400 mt-0.5">lifetime</p>
               </div>
             </div>
 
-            {/* LinkedIn tile */}
+            {/* Row 3: LinkedIn + CTA */}
             <div className={`${card} col-span-2 px-6 py-5 flex items-center gap-4`} style={{ ...cardBorder, borderLeft: '3px solid #0A66C2' }}>
               <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-11 h-11 rounded-full object-cover flex-shrink-0" />
               <div className="flex-1 min-w-0">
@@ -157,9 +154,8 @@ export default function DanielMateoPortfolio() {
               </a>
             </div>
 
-            {/* CTA tile */}
             <div className={`${card} px-6 py-5 flex flex-col items-start justify-between`} style={{ ...cardBorder, background: '#1c1c1e' }}>
-              <p className="text-xs text-gray-400">Open to partnerships</p>
+              <p className="text-xs text-gray-500">Open to partnerships</p>
               <div>
                 <p className="text-sm font-semibold text-white mb-3">Brand deals, media & speaking</p>
                 <a href="mailto:valueandtime@icloud.com"
