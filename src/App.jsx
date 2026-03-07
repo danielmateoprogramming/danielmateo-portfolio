@@ -310,41 +310,40 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* MATEO */}
-          <div className="bg-white rounded-3xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+          <div className="rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)', background: '#000' }}>
             <div className="p-5">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Also</p>
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">MATEO</h2>
-              <p className="text-sm text-gray-500 mb-4">DJ sets, live mixes, and event bookings.</p>
+              <img src="/mateo-logo.png" alt="MATEO" className="h-10 w-auto mb-4" />
+              <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>House DJ performing at nightclubs in South Florida. DJ sets, live mixes, and event bookings.</p>
 
-              <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-                <div className="flex items-center justify-between px-5 py-3.5" style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+              <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.1)' }}>
+                <div className="flex items-center justify-between px-5 py-3.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Halloween Mix 2025</p>
-                    <p className="text-xs text-gray-400">Live from Palm Beach</p>
+                    <p className="text-sm font-semibold text-white">Halloween Mix 2025</p>
+                    <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Live from Palm Beach</p>
                   </div>
                   <a href="https://x.com/itsmateomusic" target="_blank" rel="noopener noreferrer"
-                    className="text-xs font-semibold text-white px-4 py-2 rounded-full transition-colors"
-                    style={{ background: '#111' }}>
+                    className="text-xs font-semibold text-black bg-white hover:bg-gray-100 px-4 py-2 rounded-full transition-colors">
                     Book Event
                   </a>
                 </div>
                 <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1994831648&color=%23000000&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" />
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1994831648&color=%23ffffff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" />
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {[
-                  { href: 'https://x.com/itsmateomusic', label: 'Twitter', bg: 'hover:bg-gray-900 hover:text-white hover:border-gray-900', icon: <Twitter className="w-4 h-4" /> },
-                  { href: 'https://instagram.com/itsmateomusic', label: 'Instagram', bg: 'hover:bg-pink-500 hover:text-white hover:border-pink-500', icon: <Instagram className="w-4 h-4" /> },
-                  { href: 'https://tiktok.com/@itsmateomusic', label: 'TikTok', bg: 'hover:bg-black hover:text-white hover:border-black', icon: (
+                  { href: 'https://x.com/itsmateomusic', label: 'Twitter', icon: <Twitter className="w-4 h-4" /> },
+                  { href: 'https://instagram.com/itsmateomusic', label: 'Instagram', icon: <Instagram className="w-4 h-4" /> },
+                  { href: 'https://tiktok.com/@itsmateomusic', label: 'TikTok', icon: (
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                     </svg>
                   )},
-                  { href: 'https://soundcloud.com/itsmateomusic', label: 'SoundCloud', bg: 'hover:bg-orange-500 hover:text-white hover:border-orange-500', icon: <Music2 className="w-4 h-4" /> },
-                ].map(({ href, label, bg, icon }) => (
+                  { href: 'https://soundcloud.com/itsmateomusic', label: 'SoundCloud', icon: <Music2 className="w-4 h-4" /> },
+                ].map(({ href, label, icon }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                    className={`flex items-center justify-center gap-2 py-2.5 border border-gray-200 rounded-xl text-xs font-medium text-gray-600 transition-all ${bg}`}>
+                    className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-medium transition-all hover:bg-white hover:text-black"
+                    style={{ border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.6)' }}>
                     {icon}{label}
                   </a>
                 ))}
