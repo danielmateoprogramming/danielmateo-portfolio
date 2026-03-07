@@ -313,9 +313,8 @@ export default function DanielMateoPortfolio() {
           <div className="rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)', background: '#000' }}>
             <div className="px-4 pt-4 pb-4">
               <div className="flex items-center justify-center overflow-hidden mb-3" style={{ height: 80 }}>
-                <img src="/mateo-logo.png" alt="MATEO" style={{ height: 640, width: 'auto' }} />
+                <img src="/mateo-logo.png" alt="MATEO" style={{ height: 320, width: 'auto' }} />
               </div>
-              <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>DJ sets, live mixes, and event bookings.</p>
 
               <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.1)' }}>
                 <iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay"
