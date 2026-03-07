@@ -46,31 +46,27 @@ export default function DanielMateoPortfolio() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const card = 'bg-white rounded-3xl shadow-sm';
-  const cardBorder = { border: '1px solid rgba(0,0,0,0.07)' };
-
   return (
-    <div className="min-h-screen" style={{ background: '#f2f2f7' }}>
+    <div className="min-h-screen" style={{ background: '#f5f5f7' }}>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: 'rgba(242,242,247,0.85)', borderBottom: '1px solid rgba(0,0,0,0.07)' }}>
-        <div className="max-w-4xl mx-auto px-5 flex items-center justify-between py-3">
-          <span className="text-sm font-semibold text-gray-900 tracking-tight">Daniel Mateo-Galvis</span>
+      <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: 'rgba(245,245,247,0.85)', borderBottom: '1px solid rgba(0,0,0,0.08)' }}>
+        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between py-3.5">
+          <span className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</span>
 
           {/* Desktop nav */}
-          <nav className="hidden sm:flex items-center gap-0.5 bg-white rounded-full px-1.5 py-1.5" style={{ boxShadow: '0 1px 4px rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.07)' }}>
+          <nav className="hidden sm:flex items-center gap-0.5 bg-white rounded-full px-1.5 py-1.5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
                 className="relative px-4 py-1.5 text-xs font-medium rounded-full transition-colors z-10"
-                style={{ color: activeSection === id ? '#fff' : '#8e8e93' }}
+                style={{ color: activeSection === id ? '#fff' : '#6b7280' }}
               >
                 {activeSection === id && (
                   <motion.div
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-full"
-                    style={{ background: '#1c1c1e' }}
+                    className="absolute inset-0 rounded-full bg-gray-900"
                     transition={{ type: 'spring', stiffness: 400, damping: 35 }}
                   />
                 )}
@@ -86,9 +82,8 @@ export default function DanielMateoPortfolio() {
                 key={id}
                 onClick={() => scrollTo(id)}
                 className={`px-3 py-1.5 text-xs font-medium rounded-full whitespace-nowrap transition-colors ${
-                  activeSection === id ? 'text-white' : 'text-gray-500'
+                  activeSection === id ? 'bg-gray-900 text-white' : 'text-gray-500'
                 }`}
-                style={activeSection === id ? { background: '#1c1c1e' } : {}}
               >
                 {label}
               </button>
@@ -97,115 +92,62 @@ export default function DanielMateoPortfolio() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-5 py-6 space-y-3">
+      <main className="max-w-4xl mx-auto px-6 py-10 space-y-6">
 
-        {/* ── ABOUT — Bento Grid ─────────────────────────────── */}
-        <section id="about" ref={el => sectionRefs.current.about = el}>
+        {/* ── ABOUT ─────────────────────────────────────────── */}
+        <section id="about" ref={el => sectionRefs.current.about = el} className="space-y-4">
 
-          {/* Bento grid — desktop */}
-          <div className="hidden sm:grid grid-cols-3 gap-3">
-
-            {/* Row 1: Photo + Name */}
-            <div className={`${card} overflow-hidden`} style={{ ...cardBorder, aspectRatio: '1/1' }}>
-              <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-full h-full object-cover object-top" />
-            </div>
-
-            <div className={`${card} col-span-2 px-7 py-6 flex flex-col justify-center`} style={cardBorder}>
-              <p className="text-xs font-medium text-gray-400 mb-1">Finance · Crypto · Content</p>
-              <h1 className="text-2xl font-bold text-gray-900 leading-tight tracking-tight">Daniel<br/>Mateo-Galvis</h1>
-              <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-gray-800">Mateo</span> in South Florida.
-              </p>
-            </div>
-
-            {/* Row 2: 3 stat tiles */}
-            <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
-              <span className="text-xs text-gray-400">Location</span>
-              <div>
-                <p className="text-lg font-bold text-gray-900 leading-none">Palm Beach</p>
-                <p className="text-xs text-gray-400 mt-0.5">Florida</p>
-              </div>
-            </div>
-            <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
-              <span className="text-xs text-gray-400">Followers</span>
-              <div>
-                <p className="text-lg font-bold text-gray-900 leading-none">600K+</p>
-                <p className="text-xs text-gray-400 mt-0.5">across platforms</p>
-              </div>
-            </div>
-            <div className={`${card} px-5 py-5 flex flex-col justify-between`} style={cardBorder}>
-              <span className="text-xs text-gray-400">Impressions</span>
-              <div>
-                <p className="text-lg font-bold text-gray-900 leading-none">100M+</p>
-                <p className="text-xs text-gray-400 mt-0.5">lifetime</p>
-              </div>
-            </div>
-
-            {/* Row 3: LinkedIn + CTA */}
-            <div className={`${card} col-span-2 px-6 py-5 flex items-center gap-4`} style={{ ...cardBorder, borderLeft: '3px solid #0A66C2' }}>
-              <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-11 h-11 rounded-full object-cover flex-shrink-0" />
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</p>
-                <p className="text-xs text-gray-400 mt-0.5">Palm Beach · <span className="text-blue-600 font-medium">500+ connections</span></p>
-              </div>
-              <a href="https://www.linkedin.com/in/danielmateogalvis" target="_blank" rel="noopener noreferrer"
-                className="text-xs font-semibold text-blue-600 border border-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 px-4 py-1.5 rounded-full transition-all flex-shrink-0">
-                Connect
-              </a>
-            </div>
-
-            <div className={`${card} px-6 py-5 flex flex-col items-start justify-between`} style={{ ...cardBorder, background: '#1c1c1e' }}>
-              <p className="text-xs text-gray-500">Open to partnerships</p>
-              <div>
-                <p className="text-sm font-semibold text-white mb-3">Brand deals, media & speaking</p>
-                <a href="mailto:valueandtime@icloud.com"
-                  className="inline-block text-xs font-semibold text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-full transition-colors">
-                  Get in touch →
-                </a>
+          {/* Hero card */}
+          <div className="bg-white rounded-3xl p-8 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+              <img
+                src="/profile.jpg"
+                alt="Daniel Mateo-Galvis"
+                className="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
+                style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+              />
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <h1 className="text-2xl font-bold text-gray-900 leading-tight">Daniel Mateo-Galvis</h1>
+                    <p className="text-sm text-gray-500 mt-1">Finance & Crypto Content Creator · Value & Time</p>
+                    <div className="flex items-center gap-3 mt-3 flex-wrap">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">📍 Palm Beach, FL</span>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">600K+ followers</span>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">100M+ impressions</span>
+                    </div>
+                  </div>
+                  <a href="mailto:valueandtime@icloud.com"
+                    className="text-xs font-semibold text-white px-4 py-2 rounded-full transition-colors flex-shrink-0"
+                    style={{ background: '#111' }}>
+                    Get in touch
+                  </a>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed mt-4">
+                  Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-gray-900">Mateo</span> in South Florida.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Mobile about — simple card */}
-          <div className="sm:hidden space-y-3">
-            <div className={`${card} p-6`} style={cardBorder}>
-              <div className="flex items-center gap-4 mb-4">
-                <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-16 h-16 rounded-2xl object-cover flex-shrink-0" />
-                <div>
-                  <h1 className="text-xl font-bold text-gray-900 leading-tight">Daniel Mateo-Galvis</h1>
-                  <p className="text-xs text-gray-500 mt-0.5">Finance & Crypto Content Creator</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed mb-4">Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-gray-900">Mateo</span> in South Florida.</p>
-              <div className="flex gap-2 flex-wrap mb-4">
-                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">📍 Palm Beach</span>
-                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">600K+ followers</span>
-                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full">100M+ impressions</span>
-              </div>
-              <a href="mailto:valueandtime@icloud.com"
-                className="inline-block text-xs font-semibold text-white px-4 py-2 rounded-full"
-                style={{ background: '#1c1c1e' }}>
-                Get in touch →
-              </a>
+          {/* LinkedIn card */}
+          <div className="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4" style={{ border: '1px solid rgba(0,0,0,0.06)', borderLeft: '3px solid #0A66C2' }}>
+            <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-11 h-11 rounded-full object-cover flex-shrink-0" />
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-gray-900 leading-tight">Daniel Mateo-Galvis</p>
+              <p className="text-xs text-gray-400 mt-0.5">Palm Beach, Florida · <span className="text-blue-600 font-medium">500+ connections</span></p>
             </div>
-            <div className={`${card} px-5 py-4 flex items-center gap-3`} style={{ ...cardBorder, borderLeft: '3px solid #0A66C2' }}>
-              <img src="/profile.jpg" alt="Daniel Mateo-Galvis" className="w-9 h-9 rounded-full object-cover flex-shrink-0" />
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</p>
-                <p className="text-xs text-gray-400">500+ connections</p>
-              </div>
-              <a href="https://www.linkedin.com/in/danielmateogalvis" target="_blank" rel="noopener noreferrer"
-                className="text-xs font-semibold text-blue-600 border border-blue-200 hover:bg-blue-600 hover:text-white px-3 py-1.5 rounded-full transition-all flex-shrink-0">
-                Connect
-              </a>
-            </div>
+            <a href="https://www.linkedin.com/in/danielmateogalvis" target="_blank" rel="noopener noreferrer"
+              className="text-xs font-semibold text-blue-600 border border-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 px-4 py-1.5 rounded-full transition-all flex-shrink-0">
+              Connect
+            </a>
           </div>
         </section>
 
         {/* ── PARTNERSHIPS ──────────────────────────────────── */}
         <section id="partnerships" ref={el => sectionRefs.current.partnerships = el}>
-          <div className={`${card}`} style={cardBorder}>
-            <div className="px-6 pt-5 pb-3">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <div className="px-6 pt-6 pb-4">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Partnerships</p>
             </div>
             {[
@@ -233,11 +175,12 @@ export default function DanielMateoPortfolio() {
                 { name: 'Crossmint', url: 'https://crossmint.com', logo: 'https://icon.horse/icon/crossmint.com' },
                 { name: 'Magic Eden', url: 'https://magiceden.io', logo: '/magiceden-logo.png' },
               ],
-            ].map((row, rowIdx) => (
-              <div key={rowIdx} className="grid grid-cols-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+            ].map((row, rowIdx, rows) => (
+              <div key={rowIdx} className="grid grid-cols-3"
+                style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                 {row.map((partner, i) => (
                   <a key={partner.name} href={partner.url} target="_blank" rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-3 py-8 px-4 group hover:bg-gray-50 transition-colors"
+                    className="flex flex-col items-center justify-center gap-3 py-8 px-6 group hover:bg-gray-50 transition-colors"
                     style={i < row.length - 1 ? { borderRight: '1px solid rgba(0,0,0,0.06)' } : {}}>
                     <img src={partner.logo} alt={partner.name} className="h-10 w-10 object-contain"
                       onError={(e) => { e.target.style.display = 'none'; }} />
@@ -250,24 +193,30 @@ export default function DanielMateoPortfolio() {
         </section>
 
         {/* ── PROJECTS ──────────────────────────────────────── */}
-        <section id="projects" ref={el => sectionRefs.current.projects = el} className="space-y-3">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest px-1 pt-2">Projects</p>
+        <section id="projects" ref={el => sectionRefs.current.projects = el} className="space-y-4">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest px-1">Projects</p>
+
+          {/* Value & Time label */}
           <p className="text-xs font-medium text-gray-400 px-1">Value & Time</p>
 
           {/* Substack */}
-          <div className={`${card} overflow-hidden`} style={cardBorder}>
-            <img src="https://substack-post-media.s3.amazonaws.com/public/images/6bb57440-5915-4dcc-a09d-511ebc96200c_1536x1024.png"
-              alt="Article" className="w-full object-cover" style={{ maxHeight: 200 }} />
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <img
+              src="https://substack-post-media.s3.amazonaws.com/public/images/6bb57440-5915-4dcc-a09d-511ebc96200c_1536x1024.png"
+              alt="Article" className="w-full object-cover" style={{ maxHeight: 200 }}
+            />
             <div className="p-5">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 bg-orange-500 rounded-lg flex items-center justify-center">
+                <div className="w-6 h-6 bg-orange-500 rounded-md flex items-center justify-center">
                   <span className="text-white text-xs font-bold">S</span>
                 </div>
                 <span className="text-xs font-medium text-gray-400">Value & Time · Substack</span>
                 <span className="text-xs text-gray-300 ml-auto">Feb 26, 2026</span>
               </div>
               <h3 className="font-bold text-gray-900 text-base leading-snug mb-2">Magic Eden is done with ETH NFTs and Ordinals</h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-4">A strategic consolidation — focusing resources on Solana — representing intelligent cycle management rather than failure.</p>
+              <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                A strategic consolidation — focusing resources on Solana — that represents intelligent cycle management rather than failure.
+              </p>
               <div className="flex items-center gap-3">
                 <a href="https://valueandtime.substack.com/p/magic-eden-is-done-with-eth-nfts" target="_blank" rel="noopener noreferrer"
                   className="text-xs font-semibold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full transition-colors">
@@ -282,7 +231,7 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* Twitter */}
-          <div className={`${card} overflow-hidden`} style={cardBorder}>
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex items-center gap-3 px-5 py-3.5" style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
               <Twitter className="w-4 h-4 text-gray-800" />
               <span className="text-sm font-semibold text-gray-900">@valueandtime</span>
@@ -303,7 +252,7 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* YouTube */}
-          <div className={`${card} overflow-hidden`} style={cardBorder}>
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex items-center gap-3 px-5 py-3.5" style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
               <img src="/yt-icon.jpg" alt="Value & Time" className="w-7 h-7 rounded-full object-cover" />
               <div>
@@ -323,7 +272,7 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* Tools */}
-          <div className={`${card} overflow-hidden`} style={cardBorder}>
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="px-5 pt-5 pb-3">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Tools & Affiliate Links</p>
             </div>
@@ -346,7 +295,7 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* Reddit Trading */}
-          <div className={`${card} overflow-hidden`} style={cardBorder}>
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex items-center gap-3 px-5 py-3.5" style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
               <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="#ff4500">
                 <path d="M10 0C4.478 0 0 4.478 0 10c0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm5.894 9.223a1.33 1.33 0 0 1 .563 1.073 1.334 1.334 0 0 1-1.334 1.334 1.329 1.329 0 0 1-.878-.332c-.878.596-2.07.986-3.394 1.03l.577 2.717 1.876-.4a1.0 1.0 0 1 1 .093.435l-2.094.446a.25.25 0 0 1-.298-.188l-.644-3.032c-1.354-.033-2.573-.428-3.463-1.034a1.329 1.329 0 0 1-.876.332 1.334 1.334 0 0 1-1.334-1.334c0-.435.21-.82.534-1.065a2.62 2.62 0 0 1-.027-.378c0-1.917 2.228-3.472 4.974-3.472 2.745 0 4.973 1.555 4.973 3.472 0 .128-.01.254-.028.376zm-8.56.777a.889.889 0 1 0 1.778 0 .889.889 0 0 0-1.778 0zm4.939 2.356c-.607.607-1.762.655-2.273.655-.511 0-1.667-.048-2.273-.655a.167.167 0 0 1 .235-.235c.383.383 1.196.52 2.038.52.842 0 1.654-.137 2.038-.52a.167.167 0 0 1 .235.235zm-.213-1.467a.889.889 0 1 0 1.778 0 .889.889 0 0 0-1.778 0z"/>
@@ -368,13 +317,13 @@ export default function DanielMateoPortfolio() {
           </div>
 
           {/* MATEO */}
-          <div className={`${card} overflow-hidden`} style={cardBorder}>
+          <div className="bg-white rounded-3xl overflow-hidden shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="p-6">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Also</p>
               <h2 className="text-3xl font-bold text-gray-900 mb-1">MATEO</h2>
-              <p className="text-sm text-gray-500 mb-5">DJ sets, live mixes, and event bookings.</p>
+              <p className="text-sm text-gray-500 mb-6">DJ sets, live mixes, and event bookings.</p>
 
-              <div className="rounded-2xl overflow-hidden mb-4" style={{ border: '1px solid rgba(0,0,0,0.07)' }}>
+              <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
                 <div className="flex items-center justify-between px-5 py-3.5" style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
                   <div>
                     <p className="text-sm font-semibold text-gray-900">Halloween Mix 2025</p>
@@ -382,7 +331,7 @@ export default function DanielMateoPortfolio() {
                   </div>
                   <a href="https://x.com/itsmateomusic" target="_blank" rel="noopener noreferrer"
                     className="text-xs font-semibold text-white px-4 py-2 rounded-full transition-colors"
-                    style={{ background: '#1c1c1e' }}>
+                    style={{ background: '#111' }}>
                     Book Event
                   </a>
                 </div>
@@ -413,25 +362,25 @@ export default function DanielMateoPortfolio() {
 
         {/* ── CONTACT ───────────────────────────────────────── */}
         <section id="contact" ref={el => sectionRefs.current.contact = el}>
-          <div className={`${card} p-8`} style={{ ...cardBorder, background: '#1c1c1e' }}>
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">Contact</p>
-            <h2 className="text-3xl font-bold text-white mb-2">Get in touch</h2>
-            <p className="text-sm text-gray-400 mb-6 max-w-md leading-relaxed">
+          <div className="bg-white rounded-3xl p-8 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Contact</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Get in touch</h2>
+            <p className="text-sm text-gray-500 mb-6 max-w-md leading-relaxed">
               Open to brand partnerships, speaking opportunities, podcast appearances, and media collaborations.
             </p>
             <a href="mailto:valueandtime@icloud.com"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 bg-white hover:bg-gray-100 px-5 py-2.5 rounded-full transition-colors mb-6">
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-colors mb-6"
+              style={{ background: '#111' }}>
               valueandtime@icloud.com →
             </a>
             <div className="flex flex-wrap gap-2">
               {[
                 { href: 'https://x.com/valueandtime', label: '@valueandtime', icon: <Twitter className="w-4 h-4" /> },
-                { href: 'https://youtube.com/@valueandtime', label: 'YouTube', icon: <Youtube className="w-4 h-4" /> },
-                { href: 'https://www.linkedin.com/in/danielmateogalvis', label: 'LinkedIn', icon: <Linkedin className="w-4 h-4" /> },
+                { href: 'https://youtube.com/@valueandtime', label: 'YouTube', icon: <Youtube className="w-4 h-4 text-red-500" /> },
+                { href: 'https://www.linkedin.com/in/danielmateogalvis', label: 'LinkedIn', icon: <Linkedin className="w-4 h-4 text-blue-600" /> },
               ].map(({ href, label, icon }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-400 hover:text-white transition-colors"
-                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors">
                   {icon}{label}
                 </a>
               ))}
@@ -442,7 +391,7 @@ export default function DanielMateoPortfolio() {
       </main>
 
       {/* Footer */}
-      <footer className="max-w-4xl mx-auto px-5 py-8 flex justify-between items-center text-xs text-gray-400">
+      <footer className="max-w-4xl mx-auto px-6 py-8 mt-4 flex justify-between items-center text-xs text-gray-400">
         <span>© 2026 Daniel Mateo-Galvis</span>
         <div className="flex gap-5">
           <a href="https://x.com/valueandtime" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700 transition-colors">@valueandtime</a>
