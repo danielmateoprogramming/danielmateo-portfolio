@@ -100,12 +100,6 @@ export default function DanielMateoPortfolio() {
           {/* Hero card */}
           <div className="bg-white rounded-3xl p-8 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-              <img
-                src="/profile.jpg"
-                alt="Daniel Mateo-Galvis"
-                className="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
-                style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
-              />
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div>
