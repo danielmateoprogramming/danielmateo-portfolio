@@ -118,9 +118,13 @@ export default function DanielMateoPortfolio() {
                     Get in touch
                   </a>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed mt-4">
-                  Finance and crypto content creator · 600,000+ followers · 100M+ impressions · Creator of one of the most recognized independent finance brands on X. Also performing as house DJ <span className="font-semibold text-gray-900">Mateo</span> in South Florida.
-                </p>
+                <div className="text-sm text-gray-600 leading-relaxed mt-4 space-y-3">
+                  <p>Finance and crypto content creator with a combined social media following of 600,000+ across platforms. Creator of <span className="font-semibold text-gray-900">Value & Time</span>, one of the more recognized independent finance brands on X, covering crypto markets, Solana, AI, and macroeconomics.</p>
+                  <p>Background in traditional financial media production. Currently building Value & Time into a full media operation — newsletter, podcast, and YouTube — focused on honest market analysis for people who are still paying attention when things are down.</p>
+                  <p>Also Part Time House-DJ performing at nightclubs in South Florida, under the project name <span className="font-semibold text-gray-900">"Mateo"</span></p>
+                  <p>Open to brand partnerships, speaking opportunities, and media collaborations.<br/>
+                  <a href="mailto:valueandtime@icloud.com" className="font-medium text-gray-900 hover:underline">📩 valueandtime@icloud.com</a></p>
+                </div>
               </div>
             </div>
           </div>
