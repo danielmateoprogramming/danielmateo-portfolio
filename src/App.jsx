@@ -317,7 +317,7 @@ export default function DanielMateoPortfolio() {
 
               <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.1)' }}>
                 <iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/itsmateomusic&color=%23ffffff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true" />
+                  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/itsmateomusic&color=%23ffffff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false" />
               </div>
               <a href="https://x.com/itsmateomusic" target="_blank" rel="noopener noreferrer"
                 className="inline-block text-xs font-semibold text-black bg-white hover:bg-gray-100 px-4 py-2 rounded-full transition-colors mb-4">
