@@ -126,6 +126,18 @@ export default function DanielMateoPortfolio() {
               <a href="mailto:valueandtime@icloud.com" className="font-medium text-gray-900 hover:underline">📩 valueandtime@icloud.com</a></p>
             </div>
           </div>
+          {/* Newsletter CTA */}
+          <div className="bg-white rounded-2xl px-5 py-4 shadow-sm flex items-center justify-between gap-4 flex-wrap" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <div>
+              <p className="text-sm font-semibold text-gray-900">Value & Time Newsletter</p>
+              <p className="text-xs text-gray-400 mt-0.5">Markets, crypto & macro — straight to your inbox.</p>
+            </div>
+            <a href="https://valueandtime.substack.com" target="_blank" rel="noopener noreferrer"
+              className="text-xs font-semibold text-white px-4 py-2 rounded-full flex-shrink-0 transition-opacity hover:opacity-80"
+              style={{ background: '#FF6719' }}>
+              Subscribe
+            </a>
+          </div>
         </section>
 
         {/* ── PARTNERSHIPS ──────────────────────────────────── */}
