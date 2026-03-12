@@ -52,7 +52,14 @@ export default function DanielMateoPortfolio() {
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: 'rgba(250,247,242,0.85)', borderBottom: '1px solid rgba(0,0,0,0.08)' }}>
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between py-3.5">
-          <span className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</span>
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</span>
+            <a href="https://valueandtime.substack.com" target="_blank" rel="noopener noreferrer"
+              className="text-xs font-semibold text-white px-3 py-1.5 rounded-full transition-opacity hover:opacity-80 hidden sm:inline-flex"
+              style={{ background: '#FF6719' }}>
+              Newsletter
+            </a>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden sm:flex items-center gap-0.5 bg-white rounded-full px-1.5 py-1.5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
@@ -125,18 +132,6 @@ export default function DanielMateoPortfolio() {
               <p>Open to brand partnerships, speaking opportunities, and media collaborations.<br/>
               <a href="mailto:valueandtime@icloud.com" className="font-medium text-gray-900 hover:underline">📩 valueandtime@icloud.com</a></p>
             </div>
-          </div>
-          {/* Newsletter CTA */}
-          <div className="bg-white rounded-2xl px-5 py-4 shadow-sm flex items-center justify-between gap-4 flex-wrap" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <div>
-              <p className="text-sm font-semibold text-gray-900">Value & Time Newsletter</p>
-              <p className="text-xs text-gray-400 mt-0.5">Markets, crypto & macro — straight to your inbox.</p>
-            </div>
-            <a href="https://valueandtime.substack.com" target="_blank" rel="noopener noreferrer"
-              className="text-xs font-semibold text-white px-4 py-2 rounded-full flex-shrink-0 transition-opacity hover:opacity-80"
-              style={{ background: '#FF6719' }}>
-              Subscribe
-            </a>
           </div>
         </section>
 
