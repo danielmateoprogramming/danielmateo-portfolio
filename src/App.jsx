@@ -52,17 +52,16 @@ export default function DanielMateoPortfolio() {
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: 'rgba(250,247,242,0.85)', borderBottom: '1px solid rgba(0,0,0,0.08)' }}>
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between py-3.5">
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</span>
+          <span className="text-sm font-semibold text-gray-900">Daniel Mateo-Galvis</span>
+
+          {/* Desktop nav + newsletter */}
+          <div className="hidden sm:flex items-center gap-4">
             <a href="https://valueandtime.substack.com" target="_blank" rel="noopener noreferrer"
-              className="text-xs font-semibold text-white px-3 py-1.5 rounded-full transition-opacity hover:opacity-80 hidden sm:inline-flex"
+              className="text-xs font-semibold text-white px-3 py-1.5 rounded-full transition-opacity hover:opacity-80"
               style={{ background: '#FF6719' }}>
               Newsletter
             </a>
-          </div>
-
-          {/* Desktop nav */}
-          <nav className="hidden sm:flex items-center gap-0.5 bg-white rounded-full px-1.5 py-1.5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
+            <nav className="flex items-center gap-0.5 bg-white rounded-full px-1.5 py-1.5 shadow-sm" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
@@ -81,6 +80,7 @@ export default function DanielMateoPortfolio() {
               </button>
             ))}
           </nav>
+          </div>
 
           {/* Mobile nav */}
           <nav className="flex sm:hidden items-center gap-0.5 overflow-x-auto">
