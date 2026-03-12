@@ -120,8 +120,7 @@ export default function DanielMateoPortfolio() {
               </a>
             </div>
             <div className="text-sm text-gray-600 leading-relaxed space-y-2">
-              <p>Finance and crypto content creator with a combined social media following of 600,000+ across platforms. Founder of <span className="font-semibold text-gray-900">The Value Group</span>, a media company built around honest financial content — one of the more recognized independent finance brands on X, covering crypto markets, Solana, AI, and macroeconomics.</p>
-              <p>Background in traditional financial media production. Currently building The Value Group into a full media operation — newsletter, podcast, and YouTube — focused on honest market analysis for people who are still paying attention when things are down.</p>
+              <p>Finance and crypto content creator with 600,000+ followers across platforms. Founder of <span className="font-semibold text-gray-900">The Value Group</span> — a media company rooted in traditional financial media production, covering crypto markets, Solana, AI, and macroeconomics. Currently building it into a full operation — newsletter, podcast, and YouTube — focused on honest market analysis for people who are still paying attention when things are down.</p>
               <p>Also Part Time House-DJ performing at nightclubs in South Florida, under the project name <span className="font-semibold text-gray-900">"Mateo"</span></p>
               <p>Open to brand partnerships, speaking opportunities, and media collaborations.<br/>
               <a href="mailto:valueandtime@icloud.com" className="font-medium text-gray-900 hover:underline">📩 valueandtime@icloud.com</a></p>
